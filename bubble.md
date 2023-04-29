@@ -2,7 +2,7 @@
 Começa do fim/começo comparando 2 elemento (e trocando se a ordem estiver errada) até que o menor/maior chegue seu lugar devido.
 Repita sem mexer nesse lugar...
 
-<img align= "right" width= "250" height= "250" src= "!https://user-images.githubusercontent.com/102996679/235320327-115a3075-db8f-42d4-bf68-a19c3f2e4e64.png">
+<img align= "right" width= "300" height= "250" src= "https://user-images.githubusercontent.com/102996679/235320327-115a3075-db8f-42d4-bf68-a19c3f2e4e64.png">
 
 ```cpp
 #include <iostream>
