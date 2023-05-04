@@ -16,11 +16,11 @@ Ordene todos os numeros na esquerda e direita
 * j em l..r tal que A[l..j-1] <= A[j] < A[j+1.. r].
 */
 int partition (int A[] , int c , int f) {
-  int n = f-c+1;
+  int n = f-c+1;//3
   int aux[n];
   int pivo = A[f];
   int i = 0;
-  int j = n - 1;
+  int j = n - 1;//2
   
   for(int cont = l ; cont < f; cont++) { //do começo ao final
     if(A[cont] <= pivo ) aux[i++] = A[cont]; //menor para aux
@@ -32,8 +32,17 @@ int partition (int A[] , int c , int f) {
   return j;
   }
 //O(n)
+
+void quicksort (int A[] , int c, int f) {
+  if (c < f) {
+     int j = partition (A , c, f);
+     quicksort (A , c , j-1) ;
+     quicksort (A , j+1 , f);
+  }
+}
 ```
 
 Pior->  O(n²)
+T(n) = 2T(n]2) + O(n)
 Médio -> O(n logn)
 
