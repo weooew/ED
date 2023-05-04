@@ -1,10 +1,18 @@
-Particionar o vetor
+## Particionar o vetor
+
 A[c..m-1] <= A[m] < A[m+1..r]
+
 Escolha qualquer elem no subarray e chame-o de pivô 
-Organize: menores ou igual que pivô -> esquerda
+
+    Organize: 
+
+          menores ou igual que pivô -> esquerda
           maiores que pivô -> direita
+          
 OBS: Por prática mais a direita da subvetor = pivô
+
 Depois de ordenados os 2 subvetores de acordo com o pivô
+
 Ordene todos os numeros na esquerda e direita
 
 <img align= "right" width= "300" height= "500" src= "https://user-images.githubusercontent.com/102996679/236327577-f6195b2a-a226-4369-af19-d93aa7e13358.png">
@@ -43,6 +51,8 @@ void quicksort (int A[] , int c, int f) {
 ```
 
 Pior->  O(n²)
+
 T(n) = 2T(n]2) + O(n)
+
 Médio -> O(n logn)
 
