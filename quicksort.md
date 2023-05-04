@@ -7,32 +7,33 @@ OBS: Por prática mais a direita da subvetor = pivô
 Depois de ordenados os 2 subvetores de acordo com o pivô
 Ordene todos os numeros na esquerda e direita
 
+<img align= "right" width= "300" height= "500" src= "https://user-images.githubusercontent.com/102996679/236327577-f6195b2a-a226-4369-af19-d93aa7e13358.png">
 
-´´´cpp
+```
+
 /* Recebe um vetor A[l..r] com l <= r.
 * Rearranja os elementos do vetor e devolve
 * j em l..r tal que A[l..j-1] <= A[j] < A[j+1.. r].
 */
-int partition ( int A [] , int l , int r) {
-  int n = r-l+1;
+int partition (int A[] , int c , int f) {
+  int n = f-c+1;
   int aux[n];
-  int pivo = A[r];
+  int pivo = A[f];
   int i = 0;
   int j = n - 1;
   
-  for (int k = l ; k < r; k ++) {
-    if (A [k] <= pivo ) aux [i ++] = A[k ];
-    else aux [j - -] = A[ k ];  
+  for(int cont = l ; cont < f; cont++) { //do começo ao final
+    if(A[cont] <= pivo ) aux[i++] = A[cont]; //menor para aux
+    else aux[j--] = A[cont];  
   }
-  aux [i ] = pivo ;
+  aux[i] = pivo ;
   i = 0;
-  for (int k = l ; k <= r; k ++) A[ k] = aux [i ++];
+  for(int cont = c ; cont <= f; cont++) A[cont] = aux [i++];
   return j;
   }
 //O(n)
-´´´
+```
 
 Pior->  O(n²)
 Médio -> O(n logn)
 
-![image](https://user-images.githubusercontent.com/102996679/236327577-f6195b2a-a226-4369-af19-d93aa7e13358.png)
