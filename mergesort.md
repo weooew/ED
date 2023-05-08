@@ -35,7 +35,7 @@ void mergesort (int A [] , int c, int f) {
   if(c < f) {//caso base tam = 0, só um elem
     int m = (c + f)/ 2; // Dividir
     // Conquistar
-    mergesort (A, m, f);
+    mergesort (A, c, m);
     mergesort (A, m + 1, f);
     // Combinar
     Intercala (A, c, m, f);
